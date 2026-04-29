@@ -1,52 +1,167 @@
-# Welcome to your Expo app 👋
+# 📱 Curator YT - Subscription Management App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A modern React Native application built with Expo for managing and tracking your digital subscriptions across multiple platforms. Keep track of your Netflix, Spotify, YouTube Premium, and dozens of other service subscriptions in one beautifully designed app.
 
-## Get started
+![App Preview](public/preview.png)
 
-1. Install dependencies
+## ✨ Features
 
+- **🔐 Authentication System**
+  - User registration and login
+  - Forgot password functionality
+  - OTP verification
+  - Secure session management
+
+- **📊 Dashboard & Analytics**
+  - Visual insights into subscription spending
+  - Monthly/yearly spending analysis
+  - Subscription usage statistics
+  - Cost optimization recommendations
+
+- **💳 Subscription Management**
+  - Add/edit/remove subscriptions
+  - Track renewal dates and payments
+  - Support for 25+ popular services (Netflix, Spotify, YouTube, Disney+, etc.)
+  - Custom service support
+
+- **🔔 Smart Notifications**
+  - Renewal reminders
+  - Payment due alerts
+  - Cost optimization suggestions
+  - Usage insights
+
+- **💰 Billing & Payments**
+  - Payment method management
+  - Billing history tracking
+  - Subscription cost analysis
+  - Export financial reports
+
+- **⚙️ Profile & Settings**
+  - Personal information management
+  - Security settings
+  - Notification preferences
+  - Dark/light theme support
+
+## 🛠 Tech Stack
+
+- **Framework**: [Expo](https://expo.dev/) ~55.0.17
+- **Language**: TypeScript ~5.9.2
+- **Navigation**: [Expo Router](https://docs.expo.dev/router/introduction/) ~55.0.13
+- **Styling**: [NativeWind](https://www.nativewind.dev/) 5.0.0 (Tailwind CSS for React Native)
+- **UI Components**: Custom components with Expo Vector Icons
+- **Animations**: React Native Reanimated 4.2.1
+- **Package Manager**: pnpm
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v18 or later)
+- [pnpm](https://pnpm.io/) package manager
+- [Expo CLI](https://docs.expo.dev/get-started/installation/)
+- iOS Simulator (Mac) or Android Studio (for emulator)
+
+### Installation
+
+1. **Clone the repository**
    ```bash
-   npm install
+   git clone https://github.com/noor-mohammad/curator-yt.git
+   cd curator-yt
    ```
 
-2. Start the app
-
+2. **Install dependencies**
    ```bash
-   npx expo start
+   pnpm install
    ```
 
-In the output, you'll find options to open the app in a
+3. **Start the development server**
+   ```bash
+   pnpm dev
+   # or
+   pnpm start
+   ```
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+4. **Run on your preferred platform**
+   ```bash
+   # iOS Simulator
+   pnpm ios
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+   # Android Emulator
+   pnpm android
 
-## Get a fresh project
+   # Web Browser
+   pnpm web
+   ```
 
-When you're ready, run:
+### Development Setup
 
-```bash
-npm run reset-project
+The app will automatically open in:
+- [Expo Go](https://expo.dev/go) (scan QR code with your phone)
+- [iOS Simulator](https://docs.expo.dev/workflow/ios-simulator/)
+- [Android Emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
+- [Web Browser](http://localhost:8081)
+
+## 📁 Project Structure
+
+```
+curator-yt/
+├── src/
+│   ├── app/                    # App router pages
+│   │   ├── (auth)/            # Authentication screens
+│   │   ├── (tabs)/            # Main app tabs
+│   │   ├── details/           # Detail screens
+│   │   ├── notification/      # Notification screens
+│   │   └── settings/          # Settings screens
+│   ├── components/            # Reusable UI components
+│   │   └── constants/         # Theme and configuration
+│   └── services/              # Data services and API calls
+├── assets/                    # Static assets (images, icons)
+├── public/                    # Public assets
+└── [config files]            # Expo, TypeScript, Tailwind configs
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 🔧 Available Scripts
 
-### Other setup steps
+- `pnpm dev` - Start development server
+- `pnpm start` - Start Expo development server
+- `pnpm android` - Run on Android emulator
+- `pnpm ios` - Run on iOS simulator
+- `pnpm web` - Run in web browser
+- `pnpm lint` - Run ESLint for code linting
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+## 📱 Supported Platforms
 
-## Learn more
+- **iOS** (iPhone & iPad)
+- **Android** (Phone & Tablet)
+- **Web** (Progressive Web App)
 
-To learn more about developing your project with Expo, look at the following resources:
+## 🔒 Security Notice
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+_(⚠️ **Crucial**: Ensure your downloaded service account JSON file is explicitly ignored in your root `.gitignore` to prevent hardcoded structural credentials from leaking strictly into source control)._
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## ☕ Support
+
+If you found this project helpful, please consider supporting the development!
+
+<a href="https://www.buymeacoffee.com/reactbd" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+
+_Made with ❤️ by Noor Mohammad._
 
 ## Join the community
 
